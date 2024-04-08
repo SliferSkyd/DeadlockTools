@@ -7,4 +7,6 @@ module com.example.demo {
 
     opens com.example.demo to javafx.fxml;
     exports com.example.demo;
+    exports com.example.demo.Deadlock;
+    opens com.example.demo.Deadlock to javafx.fxml;
 }
