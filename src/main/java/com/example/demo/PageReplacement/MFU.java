@@ -14,7 +14,7 @@ public class MFU extends PageReplacementAlgo {
             if (cntUsed[frames[i]] > maxUsed) {
                 maxUsed = cntUsed[frames[i]];
                 pos = i;
-            } else if (cntUsed[frames[i]] == maxUsed && timeIn[i] < timeIn[pos]) {
+            } else if (cntUsed[frames[i]] == maxUsed && timeIn[frames[i]] < timeIn[frames[pos]]) {
                 pos = i;
             }
         }

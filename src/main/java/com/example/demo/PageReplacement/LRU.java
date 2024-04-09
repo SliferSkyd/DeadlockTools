@@ -12,8 +12,8 @@ public class LRU extends PageReplacementAlgo {
         int pos = -1;
         for (int i = 0; i < frames.length; ++i) {
             assert(frames[i] != -1);
-            if (timeUsed[frames[i]] < minUsedTime) {
-                minUsedTime = timeUsed[frames[i]];
+            if (lastTimeUsed[frames[i]] < minUsedTime) {
+                minUsedTime = lastTimeUsed[frames[i]];
                 pos = i;
             }
         }

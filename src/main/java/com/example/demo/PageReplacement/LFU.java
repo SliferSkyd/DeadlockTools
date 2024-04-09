@@ -14,7 +14,7 @@ public class LFU extends PageReplacementAlgo {
             if (cntUsed[frames[i]] < minUsed) {
                 minUsed = cntUsed[frames[i]];
                 pos = i;
-            } else if (cntUsed[frames[i]] == minUsed && timeIn[i] < timeIn[pos]) {
+            } else if (cntUsed[frames[i]] == minUsed && timeIn[frames[i]] < timeIn[frames[pos]]) {
                 pos = i;
             }
         }

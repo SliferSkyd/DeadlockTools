@@ -9,7 +9,7 @@ public abstract class PageReplacementAlgo {
     protected int[] pages;
     protected int[] frames;
     protected int[] timeIn;
-    protected int[] timeUsed;
+    protected int[] lastTimeUsed;
     protected int[] cntUsed;
     protected List<List<Integer>> framesList = new ArrayList<List<Integer>>();
 
@@ -23,11 +23,11 @@ public abstract class PageReplacementAlgo {
         }
         cntUsed = new int[maxIdx + 1];
         timeIn = new int[maxIdx + 1];
-        timeUsed = new int[maxIdx + 1];
+        lastTimeUsed = new int[maxIdx + 1];
         for (int i = 0; i < maxIdx + 1; ++i) {
             cntUsed[i] = 0;
             timeIn[i] = -1;
-            timeUsed[i] = -1;
+            lastTimeUsed[i] = -1;
         }
         for (int i = 0; i < pageFrames; ++i) {
             frames[i] = -1;
@@ -40,7 +40,7 @@ public abstract class PageReplacementAlgo {
         int n = pages.length;
         int m = frames.length;
         for (int i = 0; i < n; ++i) {
-            timeUsed[pages[i]] = i;
+            lastTimeUsed[pages[i]] = i;
             cntUsed[pages[i]]++;
             if (checkInFrames(pages[i])) {
                 framesList.add(new ArrayList<>());

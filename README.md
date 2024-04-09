@@ -1,5 +1,5 @@
-<h1> OS Tools </h1>
-A simple tool for my Operating System course INT2214 to earn bonus marks.
+<h1> UET OS Tools </h1>
+A simple tool I have made for my Operating System course INT2214 to earn bonus marks.
 This can also be useful in midterm and final examinations.
 
 <h2>Features</h2>
